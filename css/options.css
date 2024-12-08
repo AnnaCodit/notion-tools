@@ -1,0 +1,95 @@
+/* @import "elements/switch.css"; */
+@import "elements/switch.v2.css";
+
+:root {
+    --indent: 1.25rem;
+    --indent-text: 1rem;
+    --indent-page-box: 4rem;
+    --color-link: maroon;
+    --main-blue-light: #f1f7f2;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-size: 17px; line-height: 153%; background: #fbefe3; min-width: 100%; min-height: 100%;  } 
+/* #fef3e8 */
+/* body { font-family: monospace; } */
+body { font-family: "Roboto Mono", monospace; font-optical-sizing: auto; font-weight: 400; font-style: normal; }
+p { margin: var(--indent-text) 0;}
+p:first-child { margin-top: 0;}
+img { vertical-align: middle;}
+ul { margin: var(--indent-text) 0;}
+ul li { margin: var(--indent-text) 0; margin-left: 1.5rem;}
+
+a, .pseudo, .hover { cursor: pointer; transition: all 0.3s ease; }
+a, .pseudo { color: darkgreen; /*text-decoration-color: #ff5ec1;*/ text-decoration-thickness: 2px; }
+a:hover, .pseudo:hover { opacity: 0.8;}
+.pseudo { text-decoration-line: underline; text-decoration-style: dotted; text-decoration-thickness: 3px;  }
+/* a, .pseudo { color: var(--color-link);}
+a:hover, .pseudo:hover { opacity: 0.8;}
+.pseudo { text-decoration: underline dotted;  } */
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { margin-top: 1rem; margin-bottom: var(--indent-text);}
+.h1, h1 { }
+.h2, h2 { font-size: 2rem; margin-bottom: calc(var(--indent-text) * 1.5); }
+.h3, h3 { }
+
+
+.block { margin-bottom: var(--indent-text);}
+.flex { display: flex; align-items: center;}
+.nowrap { white-space: nowrap; word-break: keep-all;}
+
+.ui-block {border: 3px solid #000; filter: drop-shadow(3px 3px 0px #000); border-radius: 1rem;}
+.ui-shadow {filter: drop-shadow(4px 4px 0px #000); }
+
+.ui-button { background: #f7cb45;}
+
+
+.wrapper {}
+.page-width { padding: 0px 40px; max-width: 1600px; margin: 0 auto; }
+.page-width.medium { max-width: 1000px; }
+.page-width.slim { max-width: 600px;}
+.page-width.left { margin: 0; }
+.page-box { padding-top: var(--indent-page-box); padding-bottom: var(--indent-page-box);}
+.page-formatted > *:first-child { margin-top: 0;}
+
+header { padding: 20px 0 0;}
+header .logotype { font-size: 2rem; font-weight: normal; color: rgb(210 97 217);}
+header .logotype .logo { margin-right: 0px;}
+
+header .logotype-v3 { font-size: 2rem; font-weight: normal; color: #000; font-weight: bold;  }
+header .logotype-v3 .logo { margin-right: 4px; }
+header .logotype-v3 img { width: 40px; height: auto;}
+
+header .logotype-v4 { font-size: 2rem; color: #FFF; font-weight: bold; background: #000; width: fit-content;  }
+header .logotype-v4 .logo { margin-right: 2px; }
+header .logotype-v4 img { width: 40px; height: auto;}
+
+main { }
+
+/* .options { display: flex; gap: 20px; flex-wrap: wrap;} */
+
+.options { }
+.options .items { columns: 320px auto; column-gap: 1.75rem; break-inside: avoid; padding-top: 0; }
+
+.option { break-inside: avoid; background: #f8f5f3; padding: 20px; margin-bottom: 1.75rem; }
+.option:last-child {margin-bottom: 1.75rem;}
+/* .option .title { font-size: 2rem; line-height: 2.5rem; margin-top: -5px; margin-bottom: 0.75rem;} */
+.option .title { font-size: 1.5rem; line-height: 2.15rem; margin-top: -5px; margin-bottom: 0.75rem; font-weight: bold;}
+.option .description { color: #333333;}
+.option .preview { margin: 0 -20px; margin-bottom: 1.5rem; overflow: hidden; border: 2px dashed #000; border-right: 0; border-left: 0; }
+.option .preview img {width: 100%; height: auto; }
+.option .enabler { }
+
+.about-v3 {  padding-top: 0;  }
+.about-v3 .box { background: #fff7f0; padding: 20px; /*max-width: 1133px;*/ max-width: 746px; gap: 30px; align-items: flex-start; font-size: 0.95rem; --indent-text: 0.75rem; filter: none; border: 2px solid #333; }
+.about-v3 .photo { width: 100px; height: 100px; border-radius: 50%; overflow: hidden; border: 2px solid #333; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+.about-v3 .photo img { object-fit: cover; width: 100%; height: 100%; object-position: center; }
+.about-v3 .crypto-addresses { transition: all 0.3s ease; overflow: hidden; word-break: break-word; }
+.about-v3 .crypto-addresses * {   }
+.about-v3 .crypto-addresses li span { font-weight: 500;}
+
+
+footer { padding: 1.75rem 0; background: #111; color: #EEE; }
+footer a { color: #EEE; }
+footer .copywrite { font-size: 0.75rem; }
+

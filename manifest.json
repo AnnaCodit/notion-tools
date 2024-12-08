@@ -1,0 +1,37 @@
+{
+    "name": "Notion Tools",
+    "description": "Make your Notion experience a little bit better with some QOL including colored headings, folded sidebar buttons and more.",
+    "version": "1.1",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "16": "images/favicon-2-16.png",
+        "32": "images/favicon-2-32.png",
+        "48": "images/favicon-2-48.png",
+        "128": "images/favicon-2-128.png"
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "src/main.js",
+                "parts/content.js"
+            ],
+            "matches": [
+                "*://*.notion.so/*"
+            ],
+            "css": [
+                "css/content.css"
+            ]
+        }
+    ],
+    "background": {
+        "service_worker": "parts/background.js"
+    },
+    "options_page": "options.html",
+    "permissions": [
+        "tabs",
+        "storage"
+    ]
+}

@@ -1,0 +1,63 @@
+# Common paths 
+**/lib/
+**/libs/
+**/cache/
+**/vendor/
+**/uploads/
+# **/images/
+**/imgs/
+**/files/
+**/fonts/
+**/logs/
+**/test/
+**/temp/
+**/.vscode/
+
+# Images / Video / Files / Fonts 
+# *.jpg
+# *.jpeg
+# *.png
+# *.svg
+# *.gif
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.pdf
+*.woff
+*.woff2
+*.eot
+*.ttf
+*.otf
+*.xls
+*.xlsb
+
+# Logs, cache and databases 
+*.log
+*.sql
+*.sqlite
+*.db
+*.cache
+
+# Compiled source 
+*.dll
+*.exe
+*.o
+*.so
+
+# OS generated files 
+ehthumbs.db
+Thumbs.db
+dwsync.xml
+
+# wordpress
+**/wp-admin/
+**/wp-includes/
+**/wp-content/themes/twenty*
+**/wp-content/plugins/
+
+# Specific folders
