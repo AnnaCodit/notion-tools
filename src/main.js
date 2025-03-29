@@ -3,6 +3,7 @@ console.log("main.js loaded");
 const config = {};
 config.extension_id = chrome.runtime.id;
 config.show_options_on_update = false;
+config.version = '1.2.1';
 config.options = {
     o1: {
         title: 'Colored headings',

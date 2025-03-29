@@ -33,6 +33,12 @@ function init() {
         document.querySelector('.changelog').style.display = 'none';
     });
 
+    document.querySelector('.ext-version .value').textContent = config.version;
+
+    document.querySelector('.ext-version').addEventListener('click', () => {
+        document.querySelector('.changelog').style.display = 'block';
+    });
+
 }
 
 // обрабатываем чекбоксы включения модулей

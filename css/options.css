@@ -57,6 +57,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { margin-top: 1rem; margin-
 .page-formatted > *:last-child { margin-bottom: 0;}
 
 header { padding: 2rem 0 0; margin-bottom: 2rem;}
+header section { display: flex; justify-content: space-between; gap: 2rem;}
 header .logotype { font-size: 2rem; font-weight: normal; color: rgb(210 97 217);}
 header .logotype .logo { margin-right: 0px;}
 
@@ -67,6 +68,8 @@ header .logotype-v3 img { width: 40px; height: auto;}
 header .logotype-v4 { font-size: 2rem; color: #FFF; font-weight: bold; background: #000; width: fit-content;  }
 header .logotype-v4 .logo { margin-right: 2px; }
 header .logotype-v4 img { width: 40px; height: auto;}
+
+header .ext-version { font-size: 0.75rem; font-weight: normal; color: rgb(210 97 217); cursor: pointer; }
 
 .changelog { display: none; }
 .changelog .content { padding: 2rem; padding-bottom: 1rem; background: #f3ffe8;}
