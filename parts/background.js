@@ -45,16 +45,18 @@ chrome.runtime.onInstalled.addListener(function (details) {
 
         console.log("Extension updated.");
 
-        // Выполнить действия при обновлении расширения
-        // открываем страницу опций (пока разрабатываем)
-        chrome.tabs.create({
-            url: "options.html?from=update"
-        });
-
         chrome.tabs.query({ url: "*://*.notion.so/*" }, function (tabs) {
             tabs.forEach((tab) => {
                 chrome.tabs.reload(tab.id);
             });
+        });
+
+        if (!config.show_options_on_update) return;
+
+        // Выполнить действия при обновлении расширения
+        // открываем страницу опций (пока разрабатываем)
+        chrome.tabs.create({
+            url: "options.html?from=update"
         });
 
     }

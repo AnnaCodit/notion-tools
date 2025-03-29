@@ -2,6 +2,7 @@ console.log("main.js loaded");
 
 const config = {};
 config.extension_id = chrome.runtime.id;
+config.show_options_on_update = false;
 config.options = {
     o1: {
         title: 'Colored headings',
@@ -107,16 +108,19 @@ function frontendOptionSwitch(optionId, optionValue) {
             const o2_update_class = 'anco-nt-o2-upd-empty';
             const o2_interval = setInterval(() => {
                 // console.log('we are in o2 interval');
-                const element = document.querySelector('.notion-sidebar > div > div:nth-child(2) > div > * > div > div:nth-child(3) > div');
+                const element = document.querySelector('.notion-sidebar > div > div:nth-child(2) > div > * > div > div:nth-child(3) span');
+                // console.log('element', element);
                 // const element = document.querySelector('.notion-sidebar > div > div:nth-child(2) > div > * > div > div:nth-child(3) > div > span');
-                const check = element ? element.textContent : null;
-                if (!check) {
+                // const check = element ? element.textContent : null;
+                // console.log(check);
+                // if (!check) {
+                if (!element) {
                     // console.log('o2 interval: no updates');
                     document.body.classList.add(o2_update_class);
                 } else {
                     document.body.classList.remove(o2_update_class);
                 }
-            }, 3000);
+            }, 4000);
         }
         if (optionId == 'o5') {
             // console.log('we are in o2');
