@@ -19,6 +19,20 @@ function init() {
         el.style.maxHeight = (el.style.maxHeight == '0px') ? el.scrollHeight + 'px' : '0px'
         // el.style.display = (el.style.display == 'none') ? 'block' : 'none'
     });
+
+    // if we got here (options.html) from an update, show changelog div
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get("from") === "update") {
+        const changelogDiv = document.querySelector(".changelog");
+        if (changelogDiv) {
+            changelogDiv.style.display = "block";
+        }
+    }
+
+    document.querySelector('.changelog .close').addEventListener('click', () => {
+        document.querySelector('.changelog').style.display = 'none';
+    });
+
 }
 
 // обрабатываем чекбоксы включения модулей
@@ -37,8 +51,6 @@ document.querySelectorAll('.option input[type="checkbox"]').forEach(function (el
 
     });
 });
-
-
 
 function options_restore() {
     chrome.storage.sync.get(

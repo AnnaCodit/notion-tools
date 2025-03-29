@@ -23,6 +23,10 @@ config.options = {
         title: 'Reduced page header',
         default: true,
     },
+    o6: {
+        title: 'Hide "invite members" button from sidebar',
+        default: true,
+    },
     // headings_hashtag: 0,
     // shorten_sidebar_base_links: 1, // more compact search, inbox and settings buttons
     // more_space_for_board_view: 1,
@@ -99,10 +103,12 @@ function frontendOptionSwitch(optionId, optionValue) {
         // folded sidebar
         if (optionId == 'o2') {
             // console.log('we are in o2');
+            // check if inbox notifications empty, set or remove specific class for it
             const o2_update_class = 'anco-nt-o2-upd-empty';
             const o2_interval = setInterval(() => {
                 // console.log('we are in o2 interval');
-                const element = document.querySelector('.notion-sidebar > div > div > div:nth-child(2) > * > div > div:nth-child(3) > div');
+                const element = document.querySelector('.notion-sidebar > div > div:nth-child(2) > div > * > div > div:nth-child(3) > div');
+                // const element = document.querySelector('.notion-sidebar > div > div:nth-child(2) > div > * > div > div:nth-child(3) > div > span');
                 const check = element ? element.textContent : null;
                 if (!check) {
                     // console.log('o2 interval: no updates');

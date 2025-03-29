@@ -48,7 +48,7 @@ chrome.runtime.onInstalled.addListener(function (details) {
         // Выполнить действия при обновлении расширения
         // открываем страницу опций (пока разрабатываем)
         chrome.tabs.create({
-            url: "options.html?from=install"
+            url: "options.html?from=update"
         });
 
         chrome.tabs.query({ url: "*://*.notion.so/*" }, function (tabs) {

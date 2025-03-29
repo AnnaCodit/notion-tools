@@ -38,7 +38,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { margin-top: 1rem; margin-
 .flex { display: flex; align-items: center;}
 .nowrap { white-space: nowrap; word-break: keep-all;}
 
-.ui-block {border: 3px solid #000; filter: drop-shadow(3px 3px 0px #000); border-radius: 1rem;}
+.ui-block {border: 3px solid #000; filter: drop-shadow(3px 3px 0px #000); border-radius: 1rem; background: #EEE; padding: 1rem; position: relative; }
+.ui-block > .close { position: absolute; top: 0.5rem; right: 0.5rem; cursor: pointer; transition: all 0.3s ease;}
+.ui-block > .close:hover { transform: scale(1.1); }
+.ui-block > .close svg { width: 2rem; height: auto;}
 .ui-shadow {filter: drop-shadow(4px 4px 0px #000); }
 
 .ui-button { background: #f7cb45;}
@@ -49,10 +52,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { margin-top: 1rem; margin-
 .page-width.medium { max-width: 1000px; }
 .page-width.slim { max-width: 600px;}
 .page-width.left { margin: 0; }
-.page-box { padding-top: var(--indent-page-box); padding-bottom: var(--indent-page-box);}
+.page-box { padding-bottom: var(--indent-page-box);}
 .page-formatted > *:first-child { margin-top: 0;}
+.page-formatted > *:last-child { margin-bottom: 0;}
 
-header { padding: 20px 0 0;}
+header { padding: 2rem 0 0; margin-bottom: 2rem;}
 header .logotype { font-size: 2rem; font-weight: normal; color: rgb(210 97 217);}
 header .logotype .logo { margin-right: 0px;}
 
@@ -63,6 +67,9 @@ header .logotype-v3 img { width: 40px; height: auto;}
 header .logotype-v4 { font-size: 2rem; color: #FFF; font-weight: bold; background: #000; width: fit-content;  }
 header .logotype-v4 .logo { margin-right: 2px; }
 header .logotype-v4 img { width: 40px; height: auto;}
+
+.changelog { display: none; }
+.changelog .content { padding: 2rem; padding-bottom: 1rem; background: #f3ffe8;}
 
 main { }
 
