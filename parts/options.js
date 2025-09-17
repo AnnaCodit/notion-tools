@@ -22,12 +22,12 @@ function init() {
 
     // if we got here (options.html) from an update, show changelog div
     const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get("from") === "update") {
-        const changelogDiv = document.querySelector(".changelog");
-        if (changelogDiv) {
-            changelogDiv.style.display = "block";
-        }
-    }
+    // if (urlParams.get("from") === "update") {
+    //     const changelogDiv = document.querySelector(".changelog");
+    //     if (changelogDiv) {
+    //         changelogDiv.style.display = "block";
+    //     }
+    // }
 
     document.querySelector('.changelog .close').addEventListener('click', () => {
         document.querySelector('.changelog').style.display = 'none';

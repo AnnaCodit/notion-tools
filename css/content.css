@@ -7,7 +7,10 @@
 .anco-nt-o1 .notion-frame h2 {background:rgba(251, 243, 219, 1);} 
 .anco-nt-o1 .notion-frame h3 {background:rgba(231, 243, 248, 1); }
 .anco-nt-o1 .notion-frame h4 {background:rgba(244, 238, 238, 1); }
-
+/* dark theme (we can also use "body.dark" maybe ) */
+.notion-dark-theme .notion-frame h2 {background:rgba(255, 216, 112, 0.23);}
+.notion-dark-theme .notion-frame h3 {background:rgba(200, 125, 255, 0.2); }
+.notion-dark-theme .notion-frame h4 {background:rgba(255, 255, 235, 0.1); }
 
 /* ////////////// more compact search, inbox and settings buttons */
 .anco-nt-o2 .notion-sidebar > div > div:nth-child(2) { flex-direction: row !important; }
