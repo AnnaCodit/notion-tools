@@ -1,7 +1,7 @@
 {
     "name": "Notion Tools",
     "description": "Make your Notion experience a little bit better with some QOL including colored headings, folded sidebar buttons and more.",
-    "version": "1.2.3",
+    "version": "1.2.4",
     "manifest_version": 3,
     "action": {
         "default_popup": "popup.html"
@@ -19,7 +19,8 @@
                 "parts/content.js"
             ],
             "matches": [
-                "*://*.notion.so/*"
+                "*://*.notion.so/*",
+                "*://*.notion.com/*"
             ],
             "css": [
                 "css/content.css"

@@ -1,7 +1,7 @@
 // import { tellFrontendToUpdate } from "../src/main.js";
 // import * as main from "../src/main.js";
 
-// console.log('content.js loaded');
+console.log('content.js loaded');
 
 // Обработчик сообщений
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
@@ -35,7 +35,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 function init() {
 
-    // console.log('abc from INIT content.js');
+    console.log('abc from INIT content.js');
 
     // apply stored options on page load
     chrome.storage.sync.get('options', (result) => {

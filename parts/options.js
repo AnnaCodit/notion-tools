@@ -5,6 +5,8 @@
 
 function init() {
 
+    console.log('options.js init loaded');
+
     // загружаем текущие значения опций и проставляем их на странице
     options_restore();
 
@@ -66,8 +68,10 @@ function options_restore() {
             Object.entries(items.options).forEach(([option_id, option]) => {
                 // console.log([option_id, option]);
                 const el = document.querySelector(`[data-option-id="${option_id}"]`);
-                // console.log(el);
-                el.checked = option;
+                if (el) {
+                    // console.log(el);
+                    el.checked = option;
+                }
             });
         }
     );

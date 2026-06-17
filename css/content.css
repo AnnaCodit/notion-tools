@@ -1,44 +1,126 @@
 /* ////////////// common styles for heading (potential conflict with others) */
-.anco-nt-o1 .notion-frame h2, .anco-nt-o1 .notion-frame h3, .anco-nt-o1 .notion-frame h4, .anco-nt-o3 .notion-frame h2, .anco-nt-o3 .notion-frame h3, .anco-nt-o3 .notion-frame h4 {padding: 0 2px !important; margin: 3px 0 !important; position: relative; width: auto !important;}
+.anco-nt-o1 .notion-frame h2,
+.anco-nt-o1 .notion-frame h3,
+.anco-nt-o1 .notion-frame h4,
+.anco-nt-o3 .notion-frame h2,
+.anco-nt-o3 .notion-frame h3,
+.anco-nt-o3 .notion-frame h4 {
+    padding: 0 2px !important;
+    margin: 3px 0 !important;
+    position: relative;
+    width: auto !important;
+}
 
 
 /* ////////////// headers colours */
-.anco-nt-o1 .notion-frame h2, .anco-nt-o1 .notion-frame h3, .anco-nt-o1 .notion-frame h4 {   }
-.anco-nt-o1 .notion-frame h2 {background:rgba(251, 243, 219, 1);} 
-.anco-nt-o1 .notion-frame h3 {background:rgba(231, 243, 248, 1); }
-.anco-nt-o1 .notion-frame h4 {background:rgba(244, 238, 238, 1); }
+.anco-nt-o1 .notion-frame h2,
+.anco-nt-o1 .notion-frame h3,
+.anco-nt-o1 .notion-frame h4 {}
+
+.anco-nt-o1 .notion-frame h2 {
+    background: rgba(251, 243, 219, 1);
+}
+
+.anco-nt-o1 .notion-frame h3 {
+    background: rgba(231, 243, 248, 1);
+}
+
+.anco-nt-o1 .notion-frame h4 {
+    background: rgba(244, 238, 238, 1);
+}
+
 /* dark theme (we can also use "body.dark" maybe ) */
-.notion-dark-theme .notion-frame h2 {background:rgba(255, 216, 112, 0.23);}
-.notion-dark-theme .notion-frame h3 {background:rgba(200, 125, 255, 0.2); }
-.notion-dark-theme .notion-frame h4 {background:rgba(255, 255, 235, 0.1); }
+.anco-nt-o1.notion-dark-theme .notion-frame h2 {
+    background: rgba(255, 216, 112, 0.23);
+}
+
+.anco-nt-o1.notion-dark-theme .notion-frame h3 {
+    background: rgba(200, 125, 255, 0.2);
+}
+
+.anco-nt-o1.notion-dark-theme .notion-frame h4 {
+    background: rgba(255, 255, 235, 0.1);
+}
 
 /* ////////////// more compact search, inbox and settings buttons */
-.anco-nt-o2 .notion-sidebar > div > div:nth-child(2) { flex-direction: row !important; }
-.anco-nt-o2 .notion-sidebar > div > div:nth-child(2) > div > * {  }
-.anco-nt-o2 .notion-sidebar > div > div:nth-child(2) > div > * > div > div:first-child { margin-right: 0px !important; }
-.anco-nt-o2 .notion-sidebar > div > div:nth-child(2) > div > * > div > div:nth-child(2) { display: none; }
-.anco-nt-o2 .notion-sidebar > div > div:nth-child(2) > div > * > div > div:nth-child(3) { margin-right: 0px !important; }
+.anco-nt-o2 .notion-sidebar>div>div:nth-child(2) {
+    flex-direction: row !important;
+}
+
+.anco-nt-o2 .notion-sidebar>div>div:nth-child(2)>div>* {}
+
+.anco-nt-o2 .notion-sidebar>div>div:nth-child(2)>div>*>div>div:first-child {
+    margin-right: 0px !important;
+}
+
+.anco-nt-o2 .notion-sidebar>div>div:nth-child(2)>div>*>div>div:nth-child(2) {
+    display: none;
+}
+
+.anco-nt-o2 .notion-sidebar>div>div:nth-child(2)>div>*>div>div:nth-child(3) {
+    margin-right: 0px !important;
+}
+
 /* .anco-nt-o2 .notion-sidebar [data-popup-origin] { } */
 /* recent updates and notifications count */
-.anco-nt-o2.anco-nt-o2-upd-empty .notion-sidebar > div > div:nth-child(2) > div > * > div > div:nth-child(3) > div { display: none !important; }
+.anco-nt-o2.anco-nt-o2-upd-empty .notion-sidebar>div>div:nth-child(2)>div>*>div>div:nth-child(3)>div {
+    display: none !important;
+}
 
 /* ////////////// headers additional indication */
-.anco-nt-o3 .notion-frame h2, .anco-nt-o3 .notion-frame h3, .anco-nt-o3 .notion-frame h4 {}
-.anco-nt-o3 .notion-frame h2::after, .anco-nt-o3 .notion-frame h3::after, .anco-nt-o3 .notion-frame h4::after { position: absolute; background: none; color: #dcdcdc; margin: 0 0 0 10px; height: 100%; display: flex; align-items: center; top: 1px; left: 100%; white-space: nowrap; }
-.anco-nt-o3 .notion-frame h2::after { content: "#"; }
-.anco-nt-o3 .notion-frame h3::after { content: "##"; }
-.anco-nt-o3 .notion-frame h4::after { content: "###"; }    
+.anco-nt-o3 .notion-frame h2,
+.anco-nt-o3 .notion-frame h3,
+.anco-nt-o3 .notion-frame h4 {}
+
+.anco-nt-o3 .notion-frame h2::after,
+.anco-nt-o3 .notion-frame h3::after,
+.anco-nt-o3 .notion-frame h4::after {
+    position: absolute;
+    background: none;
+    color: #dcdcdc;
+    margin: 0 0 0 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    top: 1px;
+    left: 100%;
+    white-space: nowrap;
+}
+
+.anco-nt-o3 .notion-frame h2::after {
+    content: "#";
+}
+
+.anco-nt-o3 .notion-frame h3::after {
+    content: "##";
+}
+
+.anco-nt-o3 .notion-frame h4::after {
+    content: "###";
+}
 
 
 /* ////////////// board more space */
-.anco-nt-o4 .notion-board-view { margin-left: 12px !important;}
+.anco-nt-o4 .notion-board-view {
+    margin-left: 12px !important;
+}
 
 
 /* ////////////// tight page header */
 /* smaller margin for all headers except when cover on */
-.anco-nt-o5:not(.anco-nt-o5-w-cover) .layout .layout-content:nth-child(3) .notion-record-icon { margin-top: 42px !important;}
-.anco-nt-o5 .layout .layout-content:nth-child(3) .notion-record-icon { margin-top: 42px !important;}
-/* when we have cover  */
-.anco-nt-o5.anco-nt-o5-w-cover .layout .layout-content:nth-child(3) .notion-record-icon { margin-top: -42px !important;}
+.anco-nt-o5:not(.anco-nt-o5-w-cover) .layout .layout-content:nth-child(3) .notion-record-icon {
+    margin-top: 42px !important;
+}
 
-.anco-nt-o6 .notion-sidebar > div > div:nth-child(5) > div:nth-child(2) { display: none !important;}
+.anco-nt-o5 .layout .layout-content:nth-child(3) .notion-record-icon {
+    margin-top: 42px !important;
+}
+
+/* when we have cover  */
+.anco-nt-o5.anco-nt-o5-w-cover .layout .layout-content:nth-child(3) .notion-record-icon {
+    margin-top: -42px !important;
+}
+
+.anco-nt-o6 .notion-sidebar>div>div:nth-child(5)>div:nth-child(2) {
+    display: none !important;
+}

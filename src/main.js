@@ -3,16 +3,16 @@ console.log("main.js loaded");
 const config = {};
 config.extension_id = chrome.runtime.id;
 config.show_options_on_update = false;
-config.version = '1.2.3';
+config.version = '1.2.4';
 config.options = {
     o1: {
         title: 'Colored headings',
         default: true,
     },
-    o2: {
-        title: 'Folded sidebar buttons',
-        default: true,
-    },
+    // o2: {
+    //     title: 'Folded sidebar buttons',
+    //     default: true,
+    // },
     o3: {
         title: 'Headings hashtag symbols',
         default: true,
@@ -97,11 +97,13 @@ function tellFrontendToUpdate(message) {
     // chrome.runtime.sendMessage({ type: 'option_change' });
 }
 
-// применяем или выключаем опцию
+
+
 function frontendOptionSwitch(optionId, optionValue) {
     const className = `anco-nt-${optionId}`;
     if (optionValue == true) {
         document.body.classList.add(className);
+
         // folded sidebar
         if (optionId == 'o2') {
             // console.log('we are in o2');
